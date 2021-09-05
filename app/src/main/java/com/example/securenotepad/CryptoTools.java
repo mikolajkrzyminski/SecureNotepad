@@ -36,8 +36,8 @@ import javax.crypto.NoSuchPaddingException;
 
 public class CryptoTools {
     private final static String keyPairAlgorythm = "RSA";
-    //private final static String cipherAlgorythm = "AES/CBC/PKCS5Padding";
-    private final static String cipherAlgorythm = "RSA/ECB/PKCS1Padding";
+    private final static String cipherAlgorythm = "AES/CBC/PKCS5Padding";
+    //private final static String cipherAlgorythm = "RSA/ECB/PKCS1Padding";
     private final static String keyStoreAlias = "NoteApp";
     private final static String keyStoreType = "BKS";
 
@@ -226,7 +226,7 @@ public class CryptoTools {
     }
 
     public static void testKeyStore() {
-        String message = "Hello, my name is Mikołaj! ***** ***";
+        String message = "Hello, my name is Mikołaj!";
         String password = "Admin";
         CryptoTools cryptoTools = new CryptoTools();
         String keyStoreBase64 = cryptoTools.createKeyStore(password);
